@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    overflow-y: hidden;
+    min-height: 100vh;
+    align-items: center;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.video-background {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: auto;
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.video-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.container {
+    min-width: 580px;
+    min-height: 304px;
+    color: black;
+    margin: 0 auto;
+    padding: 25px 50px;
+    border-radius: 5px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    background-color:rgba(255, 255, 255, 0.85);
+}
+
+.input-container {
+    position: relative;
+    top: 20px;
+}
+
+h1 {
+    font-size: 35px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.form {
+    width: 480px;
+}
+
+label {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+input {
+    width: 95%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+    outline: none;
+    border-radius: 20px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+button {
+    width: 100%;
+    background-color: #006959;
+    margin-top: 10px;
+    height: 40px;
+    padding: 10px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(120%);
+}
+
+ul {
+    margin-left: -45px;
+}
+
+li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+li span {
+    font-size: 80px;
+    display: block;
+    text-align: center;
+}
+
+.complete {
+    position: relative;
+    top: 50px;
+}
+
+.complete-title {
+    animation: complete 4s infinite;
+}
+
+
+.complete button {
+    margin-top: 25px;
+}
+
+@keyframes complete {
+    0% {
+        color: #ef0a0a;
+    }
+
+    25% {
+        color: rgb(253, 228, 9);
+    }
+
+    50% {
+        color: rgb(70, 242, 12);
+        transform: scale(1.5);
+    }
+
+    75% {
+        color: rgb(10, 64, 244);
+    }
+
+    100% {
+        color:rgb(255, 0, 60);
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .video-background {
+        height: 100vh;
+        width: 100vw;
+    }
+    
+    video {
+        object-fit: cover;
+        object-position: 70%;
+      margin-top: -1px;
+    }
+  
+    .container {
+        min-width: unset;
+        width: 95vw;
+      min-height: 245px;
+      padding: 20px;
+      margin: 10px;
+    }
+  
+    .input-container {
+      top: unset;
+    }
+  
+    .countdown {
+      position: relative;
+      top: 10px;
+    }
+  
+    .form {
+      width: unset;
+    }
+  
+    input {
+      width: 93%;
+    }
+  
+    h1 {
+      font-size: 20px;
+    }
+  
+    li {
+      font-size: 15px;
+    }
+  
+    li span {
+      font-size: 40px;
+    }
+}
